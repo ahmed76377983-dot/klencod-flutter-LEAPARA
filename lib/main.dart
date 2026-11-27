@@ -128,6 +128,7 @@ class Notifier {
       await _p.initialize(settings);
       // Android 13+ runtime permission (safe no-op on older versions)
       final android = _p.resolvePlatformSpecificImplementation<
+          AndroidFlutterLocalNotificationsPlugin>();
           await android?.requestNotificationsPermission();
       try {
         tzdata.initializeTimeZones();

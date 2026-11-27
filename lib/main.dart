@@ -129,7 +129,6 @@ class Notifier {
       // Android 13+ runtime permission (safe no-op on older versions)
       final android = _p.resolvePlatformSpecificImplementation<
           await android?.requestNotificationsPermission();
-      await android?.requestPermission();
       try {
         tzdata.initializeTimeZones();
         tz.setLocalLocation(tz.getLocation('Africa/Cairo'));
